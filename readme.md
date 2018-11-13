@@ -2,6 +2,7 @@
 
 * Course curator - [Volodymyr Shevchuk](https://github.com/dosandk)
 * Front-camp [facebook](https://www.facebook.com/groups/270300106928894)
+* Creator [facebook](https://www.facebook.com/profile.php?id=100017422091869)
 
 ## Notice
 In project for back-end use free heroku accound therefore at first load site may be empty. Need wait 1 minute for start server side.
