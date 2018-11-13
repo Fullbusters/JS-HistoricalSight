@@ -3,6 +3,10 @@
 * Course curator - [Volodymyr Shevchuk](https://github.com/dosandk)
 * Front-camp [facebook](https://www.facebook.com/groups/270300106928894)
 
+## Notice
+In project for back-end use free heroku accound therefore at first load site may be empty. Need wait 1 minute for start server side.
+ 
+
 ## Historical Sight JS
 
 > Website where the user can see information about the historical sights of the cities of Ukraine.
@@ -28,6 +32,7 @@ Main idea of the project:
 ## TODO
 
 * Create page when developer can add information about historical sight
+* Create loader for first start when site start in first time
 
 
 ## Link to github pages
