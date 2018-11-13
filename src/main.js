@@ -146,13 +146,13 @@ const showMainPage = function () {
   
 };
 
- const busgerMenuInit = function () {
+const busgerMenuInit = function () {
   const menuBtn = document.getElementById('menu-btn');
   const body = document.getElementById('body');
   menuBtn.addEventListener('click',function (){
     body.classList.toggle('sidebar_closed');
   });
- }
+};
 
 window.onload = function () {
   busgerMenuInit();
@@ -160,31 +160,7 @@ window.onload = function () {
   getAllRegions();
   showMainPage();
 
-  var xhr = new XMLHttpRequest();
 
-// var json = JSON.stringify({
-//   title: "Ivano-Frankivsk"
- 
-// });
-
-var historicalsight = JSON.stringify({
-  title: "Jesuit College",
-  address: "Maidan Sheptytsky, 21",
-  info: "In 1669, the landowner Stanislavov Andrzej Potocki founded in the city  colony Krakow Academy, which is usually called Academy, which was engaged in the capitulars of the RCC.",
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Івано-Франківський_Національний_Медичний_Університет._Морфологічний_Корпус._м._Івано-Франківськ-1.JPG/411px-thumbnail.jpg"
- 
-});
-
-// const urlsave = 'https://webhospitaldb.herokuapp.com/api/historicalsight/25';
-// xhr.open("POST",urlsave , true)
-// xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-
-// // xhr.onreadystatechange = ...;
-
-// xhr.send(historicalsight);
-
-// xhr.open("DELETE",urlsave + '/27',true)
-// xhr.send();
 
 };
 

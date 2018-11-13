@@ -3,4 +3,3 @@ stylelint.config.js
 dist/*
 src/css/bootstrap.min.css
 src/js/jquery.min.js
-src/main.js

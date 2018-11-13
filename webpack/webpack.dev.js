@@ -8,7 +8,7 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../')
   },
   devtool: 'cheap-module-eval-source-map',
   module: {
@@ -50,7 +50,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve('./index.html')
+      template: path.resolve('./src/index.html')
     })
   ],
   devServer: {
