@@ -23,14 +23,13 @@ Main idea of the project:
 
 ## Contribution guide
 
-[Please check our guide](link-to-contribution-guide)
+[Please check our guide](https://github.com/Fullbusters/JS-HistoricalSight/blob/master/.github/CONTRIBUTING.md)
 
 ## TODO
 
 * Create page when developer can add information about historical sight
-* To make the project work not only with the local database
-* 
 
-## Link to heroku (in progress)
 
-[Heroku]()
+## Link to github pages
+
+[Github Pages](https://fullbusters.github.io/JS-HistoricalSight/)
