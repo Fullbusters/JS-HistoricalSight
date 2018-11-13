@@ -1,6 +1,6 @@
 import './scss/index.scss';
 
-const url = 'http://localhost:6060/api/region';
+const url = 'https://webhospitaldb.herokuapp.com/api/region';
 const xmlhttp = new XMLHttpRequest();
 
 const $regionList = document.getElementById('regions-list');
@@ -94,7 +94,7 @@ const getOneRegion = function (id) {
   
   
   const createCityInfo = function (id) {
-    const urlCity = 'http://localhost:6060/api/city'; 
+    const urlCity = 'https://webhospitaldb.herokuapp.com/api/city'; 
     xmlhttp.open('GET', urlCity + '/' + id, true);
     xmlhttp.send();
 
@@ -112,16 +112,6 @@ const getOneRegion = function (id) {
       div.innerHTML += '<ul class="list-HS"  id="HSlist"></ul>';
       cityInfo.appendChild(div);
 
-      xmlhttp.open('GET', urlCity + '/' + id + '/historicalsight', true);
-      xmlhttp.send();
-
-      xmlhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-          const data = JSON.parse(this.responseText);
-          createHistoricaSightList(data);
-        }
-      };
-
       const historicaSightList = document.getElementById('HSlist');
 
       const createHistoricaSightList = function (data) {
@@ -138,10 +128,11 @@ const getOneRegion = function (id) {
         });
         
       };
-    };
 
+      console.log(data.historicalSights);
+      createHistoricaSightList(data.historicalSights);
     
-    
+    };
 
   };
 };
