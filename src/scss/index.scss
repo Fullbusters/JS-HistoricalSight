@@ -114,7 +114,7 @@
 
 .city-info {
     min-height: 80vh;
-    background-image: url('/src/citybg.jpg');
+    background-image: url('../citybg.jpg');
     background-size: 100% 100%;
     text-align: center;
     padding: 1%;
@@ -124,15 +124,12 @@
     }
 }
 
-.list-HS {
-    height: 500px;
-}
 
   
 .title-HS {
     font-weight: bold;
     position: relative;
-    top: 12px;
+    border: 1px solid;
     font-size: 1.2em;
     height: 10vh;
 }
@@ -144,10 +141,9 @@
 .list {
     width: 100%;
     background: #2d0381;
-    padding: 2px 5px 2px 55px;
     box-sizing: border-box;
     border: #fff;
-
+    margin-bottom: 10px;
     font-weight: lighter;
     cursor: pointer;
 
@@ -181,6 +177,11 @@
         width: 30%;
     }
     
+}
+
+.content-city {
+    width: 100%;
+    text-align: center;
 }
   
   

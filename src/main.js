@@ -1,5 +1,6 @@
 import './scss/index.scss';
 
+
 const url = 'https://webhospitaldb.herokuapp.com/api/region';
 const xmlhttp = new XMLHttpRequest();
 
@@ -118,18 +119,16 @@ const getOneRegion = function (id) {
         for (let i = 0 ; i < data.length; i++) {
           const div = document.createElement('div');
           div.className = 'list';
-          div.innerHTML = '<div class="title-HS">' + data[i].title + '</div><ul> <li>' +
-           data[i].info + '</li> <img class="image" src="' + data[i].image + '"/> </ul> ';
+          div.innerHTML = '<div class="title-HS">' + data[i].title + '</div><ul><li>' +
+           data[i].info + '</li><img class="image" src="' + data[i].image + '"/></ul>';
           historicaSightList.appendChild(div);
         }
 
-        $('.list').click(function (){
-          $(this).find('ul').toggleClass('open');
+        historicaSightList.addEventListener('click',function (){
+          event.target.parentNode.lastChild.classList.toggle('open');
         });
         
       };
-
-      console.log(data.historicalSights);
       createHistoricaSightList(data.historicalSights);
     
     };
@@ -147,14 +146,45 @@ const showMainPage = function () {
   
 };
 
-window.onload = function () {
-  $('.menu-btn').on('click',function (){
-    $('body').toggleClass('sidebar_closed');
+ const busgerMenuInit = function () {
+  const menuBtn = document.getElementById('menu-btn');
+  const body = document.getElementById('body');
+  menuBtn.addEventListener('click',function (){
+    body.classList.toggle('sidebar_closed');
   });
+ }
+
+window.onload = function () {
+  busgerMenuInit();
+
   getAllRegions();
   showMainPage();
 
-  
+  var xhr = new XMLHttpRequest();
+
+// var json = JSON.stringify({
+//   title: "Ivano-Frankivsk"
+ 
+// });
+
+var historicalsight = JSON.stringify({
+  title: "Jesuit College",
+  address: "Maidan Sheptytsky, 21",
+  info: "In 1669, the landowner Stanislavov Andrzej Potocki founded in the city  colony Krakow Academy, which is usually called Academy, which was engaged in the capitulars of the RCC.",
+  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Івано-Франківський_Національний_Медичний_Університет._Морфологічний_Корпус._м._Івано-Франківськ-1.JPG/411px-thumbnail.jpg"
+ 
+});
+
+// const urlsave = 'https://webhospitaldb.herokuapp.com/api/historicalsight/25';
+// xhr.open("POST",urlsave , true)
+// xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+// // xhr.onreadystatechange = ...;
+
+// xhr.send(historicalsight);
+
+// xhr.open("DELETE",urlsave + '/27',true)
+// xhr.send();
 
 };
 

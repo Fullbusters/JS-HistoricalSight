@@ -2,7 +2,7 @@
   "name": "project-scaffoldings",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/main.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js --open --host 192.168.0.101",
     "test": "jest",
