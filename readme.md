@@ -6,7 +6,8 @@
 
 ## Notice
 In project for back-end use free heroku accound therefore at first load site may be empty. Need wait 1 minute for start server side.
- 
+
+Because the API returns from the server made by me there is little data. Data is present only Frankivsk
 
 ## Historical Sight JS
 
@@ -34,6 +35,7 @@ Main idea of the project:
 
 * Create page when developer can add information about historical sight
 * Create loader for first start when site start in first time
+* Add Data to API
 
 
 ## Link to github pages
